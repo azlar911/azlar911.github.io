@@ -1,0 +1,10 @@
+a = int(input("1st: "))
+b = int(input("2nd: "))
+
+print('a+b= {0}'.format(a+b))
+print('a-b= {0}'.format(a-b))
+print('a*b= {0}'.format(a*b))
+print('a/b= {0}'.format(a/b))
+print('a//b= {0}'.format(a//b))
+print('a%b= {0}'.format(a%b))
+print('a**b= {0}'.format(a**b))
