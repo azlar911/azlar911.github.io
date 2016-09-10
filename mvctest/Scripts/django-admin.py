@@ -1,5 +1,0 @@
-#!c:\users\apple\desktop\12\mvctest\scripts\python.exe
-from django.core import management
-
-if __name__ == "__main__":
-    management.execute_from_command_line()

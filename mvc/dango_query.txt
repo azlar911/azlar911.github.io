@@ -1,0 +1,23 @@
+exact:完全符合 Post.objects.get(id__exact=14) = SQL SELECT ... WHERE id = 14
+iexact:不分大小寫的符合 Post.objects.get(id__iexact='blog')
+contains:存在 Post.objects.get(id__contains='Rex')
+icontains:不分大小寫的存在 Post.objects.get(id__icontains='Rex')
+in:給定一個名單 Post.objects.filter(id__=[1,3,4])
+gt:大於 Post.objects.filter(id__gt=4) = SQL SELECT ... WHERE id > 4
+gte:大於等於
+lt:小於
+lte:小於等於
+startswith:開始 Post.objects.filter(id__startswith='Will') = SQL SELECT ... WHERE headline LIKE 'Will%'
+istartswith:不分大小寫的開始
+endswith:結束
+iendswith:不分大小寫的結束
+range:範圍 Post.objects.filter(id__range=(2005,1,1 , 2005,3,31))
+date:找日期 Post.objects.filter(pub_date=datetime.date(2005,1,1))
+year:年 Post.objects.filter(pub_date__year=2005)
+month:月 Post.objects.filter(pub_date__month=12)
+day:日 Post.objects.filter(pub_date__day=3)
+week_day:找星期幾 1是星期天 7是星期六 Post.objects.filter(pub_week__day=3)
+isnull:判定是否為空值 後面接true/false Post.objects.filter(pub_date__isnull=True)
+search:布林值的全文搜索 Post.objects.filter(headline__search="+Django -jazz Python")
+regex:正規表示式的搜索 Post.objects.get(title__regex=r'^(An?|The) +')
+iregex:不分大小寫的正規表示式搜索
